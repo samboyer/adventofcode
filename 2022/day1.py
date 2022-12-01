@@ -3,8 +3,8 @@ print(
         sum(
             map(
                 int,
-                e.strip().split('\n')
+                e.split('\n')
             )
-        ) for e in open('i/1').read().split('\n\n')
+        ) for e in open('i/1').read()[:-1].split('\n\n')
     )
 )
