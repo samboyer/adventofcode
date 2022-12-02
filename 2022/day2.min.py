@@ -1,1 +1,1 @@
-s = ['B X','C Y','A Z','A X','B Y','C Z','C X','A Y','B Z'];print(sum(s.index(l.strip())+1 for l in open('i/2').readlines()))
+s='BXCYAZAXBYCZCXAYBZ';print(sum(s.index(l[::2])//2+1 for l in open('i/2').readlines()))

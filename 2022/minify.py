@@ -3,9 +3,8 @@ import re
 
 def minify(code:str)->str:
     code = re.sub('#.*','', code)
-    code = re.sub(':\\s+',':', code)
+    code = re.sub('\\s*([-+*/:=,])\\s*','\\1', code)
     code = re.sub('\\s*\n\\s*','', code)
-
     # TODO 2:1 or 3:1 packer if gain can be made
 
     return code
