@@ -1,1 +1,1 @@
-s='BXCYAZAXBYCZCXAYBZ';print(sum(s.index(l[::2])//2+1 for l in open('i/2').readlines()))
+print(sum('BXCYAZAXBYCZCXAYBZ'.index(l[::2])//2+1 for l in open('i/2').readlines()))

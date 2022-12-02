@@ -1,11 +1,9 @@
 # Day 2 - rock paper scissors
 
-# the score of the state "xy" is the index of that sustring in s, //2.
-s = 'BXCYAZAXBYCZCXAYBZ';
-
+# the score of the state "xy" is the index of that sustring in the LUT, //2.
 print(
     sum(
-        s.index(
+        'BXCYAZAXBYCZCXAYBZ'.index(
             l[::2]
         )//2 + 1 for l in open('i/2').readlines()
     )

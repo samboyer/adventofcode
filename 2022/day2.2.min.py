@@ -1,0 +1,1 @@
+print(sum('BXCXAXAYBYCYCZAZBZ'.index(l[::2])//2+1 for l in open('i/2').readlines()))
