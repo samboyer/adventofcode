@@ -1,0 +1,1 @@
+l=open('i/3','rb').readlines();print(sum(26+(c&31)-(c&32 and 26)for c in [[b for b in l[i] if b in l[i+1] and b in l[i+2]][0]for i in range(0,len(l),3)]))
