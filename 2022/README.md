@@ -6,4 +6,4 @@ Will I get bored 10 days in and give up again? probably yes
 
 ## To-do
 
-- automatically apply the 2:1 or 3:1 compressors when a saving can be made (<https://code.golf/wiki/langs/python>)
+- pipe code output through cowsay
