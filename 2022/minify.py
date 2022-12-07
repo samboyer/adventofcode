@@ -6,11 +6,13 @@ DO_COMPRESSION = False
 
 def minify(code:str)->str:
     code = re.sub('#newline','@newline@', code) #for when we actually need a newline (e.g. ending a for loop)
+    code = re.sub('#space','@space@', code) #for when we actually need a space (e.g. indenting a nested if statement)
     code = re.sub('\\s*#.*','', code)
     code = re.sub('\\s*([-+*/:=,])\\s*','\\1', code)
     code = re.sub('\\s*\n\\s*','', code)
     # reinsert special statements
     code = re.sub('@newline@', '\n', code)
+    code = re.sub('@space@', ' ', code)
     # cleanup
     code = re.sub('\\s+\n', '\n', code)
     code = re.sub('\\s+$', '\n', code)
