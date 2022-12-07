@@ -1,10 +1,19 @@
 import os
 import re
 
+DO_COMPRESSION = False
+
+
 def minify(code:str)->str:
-    code = re.sub('#.*','', code)
+    code = re.sub('#newline','@newline@', code) #for when we actually need a newline (e.g. ending a for loop)
+    code = re.sub('\\s*#.*','', code)
     code = re.sub('\\s*([-+*/:=,])\\s*','\\1', code)
     code = re.sub('\\s*\n\\s*','', code)
+    # reinsert special statements
+    code = re.sub('@newline@', '\n', code)
+    # cleanup
+    code = re.sub('\\s+\n', '\n', code)
+    code = re.sub('\\s+$', '\n', code)
     return code
 
 PACKER_2_THRESHOLD = 50
@@ -46,7 +55,7 @@ for file in os.listdir('.'):
         with open(file[:-3]+'.min.py','w') as f:
             f.write(minified)
 
-        if len(minified)>PACKER_2_THRESHOLD:
+        if DO_COMPRESSION and len(minified)>PACKER_2_THRESHOLD:
             compressed = compress(minified)
             with open(file[:-3]+'.enc.min.py','wb') as f:
                 f.write(bytes(compressed,'u16'))
