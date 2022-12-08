@@ -1,0 +1,1 @@
+g=open('i/8','rb').readlines();n=range(len(g));t=[[r[i]for r in g]for i in n];print(sum([any(all(x<g[j][i]for x in s)for s in[g[j][:i],g[j][i+1:],t[i][:j],t[i][j+1:]])for i in n for j in n]))

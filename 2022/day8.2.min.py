@@ -1,0 +1,2 @@
+g=open('i/8','rb').readlines();n=range(len(g));t=[[r[i]for r in g]for i in n];from math import prod
+print(max(prod(([x>=g[j][i]for x in s]+[1]).index(1)+1for s in [g[j][1:i][::-1],g[j][i+1:-2],t[i][1:j][::-1],t[i][j+1:-1]])for i in n for j in n))
