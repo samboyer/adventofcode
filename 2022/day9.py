@@ -16,23 +16,23 @@ def f(d):#newline#space
     # print(d)
     exec(f'h[{O[d]}=1'); #make the right head movement
 
-    dx=h[0]-t[0];
-    dy=h[1]-t[1]#newline#space
+    x=h[0]-t[0];
+    y=h[1]-t[1]#newline#space
 
-    if dy>1:
+    if y>1:
         t[1]+=1;
         #if there's also an x difference, allow to move diagonally.
-        #(assuming we're moving correctly, dx will only ever be [-1..1])
-        t[0]+=dx#newline#space
-    if dy<-1:
+        #(assuming we're moving correctly, x will only ever be [-1..1])
+        t[0]+=x#newline#space
+    if y<-1:
         t[1]-=1;
-        t[0]+=dx#newline#space
-    if dx>1:
+        t[0]+=x#newline#space
+    if x>1:
         t[0]+=1;
-        t[1]+=dy#newline#space
-    if dx<-1:
+        t[1]+=y#newline#space
+    if x<-1:
         t[0]-=1;
-        t[1]+=dy#newline#space
+        t[1]+=y#newline#space
     return tuple(t) #return tail pos to make set of unique tail positions
 #newline
 
