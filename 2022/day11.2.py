@@ -23,8 +23,7 @@ def k(m): #newline#space #do a round for monke m
   m[0]=[]
 
 #newline
-from math import prod
-#newline
+from math import prod;
 
 M = [
   [
