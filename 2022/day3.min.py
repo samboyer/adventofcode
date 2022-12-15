@@ -1,1 +1,1 @@
-print(sum(26+(c&31)-(c&32 and 26)for c in [[l for l in s[:len(s)//2] if l in s[len(s)//2:]][0]for s in open('i/3','rb').readlines()]))
+print(sum(26+(c&31)-(c&32 and 26)for c in[[l for l in s[:len(s)//2]if l in s[len(s)//2:]][0]for s in open('i/3','rb').readlines()]))

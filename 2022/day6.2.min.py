@@ -1,1 +1,1 @@
-s=open('i/6').read();print([len(set(s[i:i+14])) for i in range(len(s))].index(14)+14)
+s=open('i/6').read();print([len(set(s[i:i+14]))for i in range(len(s))].index(14)+14)

@@ -1,1 +1,1 @@
-import re;print(len([l for l in open('i/4').readlines()for a,b,c,d in [map(int,re.split(',|-',l))]if (a<=c and b>=d)or(c<=a and d>=b)]))
+import re;print(len([l for l in open('i/4').readlines()for a,b,c,d in[map(int,re.split(',|-',l))]if(a<=c and b>=d)or(c<=a and d>=b)]))
