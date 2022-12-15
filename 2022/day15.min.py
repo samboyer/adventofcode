@@ -1,0 +1,1 @@
+import re;print(len(set.union(*[set(range(a-(x:=abs(a-c)+abs(b-d)-abs(b-2000000)),a+x))for a,b,c,d in[map(int,re.findall('-?\d+',l))for l in open('i/15').readlines()]])))
