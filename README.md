@@ -1,12 +1,16 @@
 # Advent of Code 2022 - sam's extremely cursed solutions
 
 ```python
-# day11.2.min.py - monkey throwing simulation
-def k(m):
- for old in m[0]:n=eval(m[1])%prod(m[2]for m in M);d=int(m[4]if n%m[2]else m[3]);M[d][0]+=[n];m[5]+=1
- m[0]=[]
-from math import prod;M=[[[int(l)for l in t[1][18:].split(',')],t[2][19:],int(t[3][21:]),t[4][29:],t[5][30:],0]for t in[m.split('\n')for m in open('i/11').read().split('\n\n')]];[k(m) for i in [0]*10000 for m in M];print(prod(sorted(m[5]for m in M)[-2:]))
+# day 17.min.py - tetris simluator
+R=[(0,0)];J=open('i/17').read();j=0;M=lambda:max(c[1]for c in R)
+for i in range(2022):
+ A=i%5*10;s=[eval(','.join('00102030001001112112001020212200010203000001101100'[r:r+2]))for r in range(A,A+10,2)];x=2;y=M()+4;K=lambda m,n:n and all((m+a,n+b)not in R for a,b in s);L=1
+ while L:x+=-(x and K(x-1,y))if J[j%len(J)]<'>'else x<[3,4,4,6,5][i%5]and K(x+1,y);j+=1;L=K(x,y-1);y-=L
+ R+=[(x+a,y+b)for a,b in s]
+print(M())
 ```
+
+**Current size of all 2022 programs (pt1): 3,645 bytes (56% of github's favicon.ico)**
 
 Having never tried code golf before (and being a v lazy programmer), I'm gonna try to golf the AoC 2022 problems (see <https://codegolf.meta.stackexchange.com/questions/1280/community-faq-for-programming-puzzles-code-golf> for more info).
 
