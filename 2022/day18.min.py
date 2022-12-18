@@ -1,0 +1,2 @@
+def f(a,d,*c):e=list(c);e[a]+=d;return(c in G)and(*e,)not in G
+G=*map(eval,open('i/18').readlines()),;R=range(max(sum(G,()))+1);print(sum(f(a,d,x,y,z)for a in(0,1,2)for d in(-1,+1)for x in R for y in R for z in R))
