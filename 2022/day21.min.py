@@ -1,0 +1,1 @@
+import re;exec(re.sub('([a-z]+)','\\1()',open('i/21').read()).replace('():','=lambda:'));print(root())
