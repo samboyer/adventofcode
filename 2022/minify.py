@@ -55,7 +55,7 @@ def compress(code:str)->bytes:
 
 
 
-excludes = ['minify.py']
+excludes = ['minify.py','count.py']
 
 
 for file in os.listdir('.'):
