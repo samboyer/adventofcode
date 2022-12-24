@@ -10,9 +10,9 @@ for i in range(2022):
 print(M())
 ```
 
-**Current size of all 2022 programs (days 1-23, pt1): 6,002 bytes (92% of github's [favicon.ico](https:/github.com/favicon.ico))**
+**Current size of all 2022 programs (days 1-24, pt1): 6,542 bytes (100.3% of github's [favicon.ico](https:/github.com/favicon.ico))**
 
-*(it's getting close* 😬 *)*
+*(dw i'm gonna fix it)*
 
 Having never tried code golf before (and being a v lazy programmer), I'm gonna try to golf the AoC 2022 problems (see <https://codegolf.meta.stackexchange.com/questions/1280/community-faq-for-programming-puzzles-code-golf> for more info).
 

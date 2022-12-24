@@ -7,7 +7,8 @@ SUBS = {
     '#end\\n(\\n|.)*': '', #macro to remove the rest of the file
     '#newline': '@newline@', #for when we actually need a newline (e.g. ending a for loop)
     '#space': '@space@',  #for when we actually need a space (e.g. indenting a nested if statement)
-    '((\\s*[^\'"]#)|(^#)).*': '',
+    '\\s*([^\'"])#.*': '\\1',
+    '^#.*': '',
     '\\s*([-+*/:=,])\\s*': '\\1',
     '\\s*\n\\s*': '',
     '([)\\]}])\\s*(\\w)': '\\1\\2',
