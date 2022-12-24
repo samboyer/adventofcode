@@ -18,6 +18,7 @@ SUBS = {
     # cleanup
     '\\s+\n': '\n',
     '\\s+$': '\n',
+    '\r': '', #convert from CRLF to LF
 }
 
 def minify(code:str)->str:
@@ -61,8 +62,8 @@ excludes = ['minify.py','count.py']
 for file in os.listdir('.'):
     if file.endswith('.py') and not file.endswith('.min.py') and file not in excludes:
         minified = minify(open(file).read())
-        with open(file[:-3]+'.min.py','w') as f:
-            f.write(minified)
+        with open(file[:-3]+'.min.py','wb') as f:
+            f.write(minified.encode('ASCII'))
 
         if DO_COMPRESSION and len(minified)>PACKER_2_THRESHOLD:
             compressed = compress(minified)
