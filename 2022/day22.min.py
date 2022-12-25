@@ -1,4 +1,4 @@
-F=open('i/22').readlines();G=F[:-2];X=max(len(l)for l in G)-1;G=[l[:-1]+' '*X for l in G];x=G[0].index('.');u=1;y=v=0;L=-1;R=-2;import re
+import re;F=open('i/22').readlines();G=F[:-2];X=max(len(l)for l in G)-1;G=[l[:-1]+' '*X for l in G];x=G[0].index('.');u=1;y=v=0;L=-1;R=-2
 for n in eval(re.sub('(\\d+|L|R)','\\1,',F[-1])):
  u,v=*((v,-u)if n==L else(-v,u)if n==R else(u,v)),
  for i in range(n):

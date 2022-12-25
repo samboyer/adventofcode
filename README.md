@@ -10,7 +10,7 @@ for i in range(2022):
 print(M())
 ```
 
-**Current size of all 2022 programs (days 1-24, pt1): 6,542 bytes (100.3% of github's [favicon.ico](https:/github.com/favicon.ico))**
+**Current size of all 2022 programs (days 1-25, pt1): 6,309 bytes (97% of github's [favicon.ico](https:/github.com/favicon.ico))**
 
 *(dw i'm gonna fix it)*
 

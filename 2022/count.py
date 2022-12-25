@@ -2,9 +2,11 @@
 import os
 n=0
 sizes={}
+
 for name in os.listdir('.'):
   if '.min.py' in name and '.2.' not in name:
-    size=len(open(name,'rb').read())
+    file=open(name,'rb').read()
+    size=len(file)
     sizes[name]=size
     n+=size
 

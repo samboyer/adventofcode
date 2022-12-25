@@ -1,6 +1,7 @@
 # day 22 - map navigation
 # answer = 26558
 
+import re;
 F=open('i/22').readlines();
 G=F[:-2];
 X=max(len(l) for l in G)-1; #omit newline
@@ -8,8 +9,7 @@ G=[l[:-1]+' '*X for l in G]; #pad every line to prevent lookup errors
 x=G[0].index('.');
 u=1;
 y=v=0;
-L=-1;R=-2;
-import re
+L=-1;R=-2
 
 #newline
 

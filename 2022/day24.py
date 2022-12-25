@@ -60,7 +60,7 @@ def h(x,y,t):
     z((*c,t+1))
     for c in [(x-1,y),(x+1,y),(x,y+1),(x,y),(x,y-1)]
     if (
-      0<=c[0]<X and 0<=c[1]<Y  #@@@ that is horrible
+      0<=c[0]<X and 0<=c[1]<Y#space
       or c in(g,(0,-1))
     )
     #disallow stopping on a blizzard tile
