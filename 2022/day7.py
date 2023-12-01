@@ -1,27 +1,25 @@
 # day 7 - directory traversal
 # answer = 1243729
 
-def f(c):#newline#space
-    global b,t#newline#space
-    if c[1]=='cd':#newline#space#space
-        if c[2][0]=='.':
-            t+=x if(x:=b.pop())<=100000 else 0;
+def f(s,c,a=0):#newline#space
+    if c=='cd':#newline#space#space
+        if a[0]<'/': #shorter than =='.'
+            b[0]+=x if(x:=b.pop())<=100000 else 0;
             b[-1]+=x#newline#space#space
         else:
-            b+=[0] #push 0 to subdir size stack
+            b.append(0) #push 0 to subdir size stack
             #newline#space
-    b[-1]+=int(c[0])if c[0].isdigit()else 0
+    if s.isdigit():b[-1]+=int(s)
 
 #newline
 
-b=[]; #stack of subdirectory sizes
-t=0;  #sum of directories whose size is <100,000
+b=[0]; #stack of subdirectory sizes
 
-[f(l.split(' ')) for l in open('i/7').readlines()];
+[f(*l.split(' ')) for l in open('i/7').readlines()];
 
-[f(['','cd','.']) for _ in b]; #insert extra 'cd ..'s to sum up the remaining entries
+[f('','cd','.') for _ in b]; #insert extra 'cd ..'s to sum up the remaining entries
 
-print(t)
+print(b[0])
 
 
 

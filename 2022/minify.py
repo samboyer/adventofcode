@@ -7,7 +7,8 @@ SUBS = {
     '#end\\n(\\n|.)*': '', #macro to remove the rest of the file
     '#newline': '@newline@', #for when we actually need a newline (e.g. ending a for loop)
     '#space': '@space@',  #for when we actually need a space (e.g. indenting a nested if statement)
-    '\\s*#.*': '',
+    '\\s*([^\'"])#.*': '\\1',
+    '^#.*': '',
     '\\s*([-+*/:=,])\\s*': '\\1',
     '\\s*\n\\s*': '',
     '([)\\]}])\\s*(\\w)': '\\1\\2',
@@ -18,6 +19,7 @@ SUBS = {
     # cleanup
     '\\s+\n': '\n',
     '\\s+$': '\n',
+    '\r': '', #convert from CRLF to LF
 }
 
 def minify(code:str)->str:
@@ -55,16 +57,51 @@ def compress(code:str)->bytes:
 
 
 
-excludes = ['minify.py']
+excludes = ['minify.py','count.py']
 
+files={}
 
 for file in os.listdir('.'):
     if file.endswith('.py') and not file.endswith('.min.py') and file not in excludes:
         minified = minify(open(file).read())
-        with open(file[:-3]+'.min.py','w') as f:
-            f.write(minified)
+        if '.2.' not in file:
+            day=int(file[3:-3])
+            files[day]=minified
+
+        with open(file[:-3]+'.min.py','wb') as f:
+            f.write(minified.encode('ASCII'))
+
 
         if DO_COMPRESSION and len(minified)>PACKER_2_THRESHOLD:
             compressed = compress(minified)
             with open(file[:-3]+'.enc.min.py','wb') as f:
                 f.write(bytes(compressed,'u16'))
+
+
+
+combined="""from collections import deque
+import re
+_r=range
+_p=print
+_u=lambda f:open(f).read()
+_v=lambda f:open(f).readlines()
+"""
+
+ALL_SUBS = {
+  'range':'_r',
+  'print':'_p',
+  'open\(([i/0-9\']+)\).read\(\)' : '_u(\\1)',
+  'open\(([i/0-9\']+)\).readlines\(\)' : '_v(\\1)',
+  'import re(;|\n)' : '',
+  'from collections import deque(;|\n)' : '',
+}
+
+
+for name,code in sorted(files.items(), key=lambda item: item[0]):
+    for find, repl in ALL_SUBS.items():
+        code = re.sub(find,repl,code)
+    combined+=code+'\n'
+
+
+print(f'all.min.py file is {len(combined)} bytes!')
+open('all.min.py','wb').write(combined.encode('ASCII'))

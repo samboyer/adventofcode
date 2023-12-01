@@ -1,5 +1,7 @@
 # Advent of Code 2022 - sam's extremely cursed solutions
 
+**Current size of all 2022 programs (days 1-25, pt1): 6,309 bytes (97% of github's [favicon.ico](https:/github.com/favicon.ico))**
+
 ```python
 # day 17.min.py - tetris simluator
 R=[(0,0)];J=open('i/17').read();j=0;M=lambda:max(c[1]for c in R)
@@ -11,7 +13,7 @@ print(M())
 ```
 
 **Current size of all 2022 programs (days 1-18, pt1): 4,785 bytes (73% of github's favicon.ico)**
-*eek it's getting close*
+_eek it's getting close_
 
 Having never tried code golf before (and being a v lazy programmer), I'm gonna try to golf the AoC 2022 problems (see <https://codegolf.meta.stackexchange.com/questions/1280/community-faq-for-programming-puzzles-code-golf> for more info).
 
