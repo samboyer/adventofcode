@@ -16,6 +16,7 @@
 | Day | Language                                  | Runtime | Size        |
 | --- | ----------------------------------------- | ------- | ----------- |
 | 1   | [Scratch (MIT)](https://scratch.mit.edu/) | 67.45s  | 1059 blocks |
+| 2   | [PostgreSQL](https://www.postgresql.org/) | <1s     | 12 SELECTs  |
 
 <!--
 # Gallery
