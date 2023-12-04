@@ -17,6 +17,8 @@
 | --- | ----------------------------------------- | ------- | ----------- |
 | 1   | [Scratch (MIT)](https://scratch.mit.edu/) | 67.45s  | 1059 blocks |
 | 2   | [PostgreSQL](https://www.postgresql.org/) | <1s     | 12 SELECTs  |
+| 3   | [Microsoft Excel](https://www.microsoft.com/en-gb/microsoft-365/excel) (not VBScript/Python)| <1s | 252,340 formula cells |
+| 4   | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | <1s     | 597 selectors  |
 
 <!--
 # Gallery
