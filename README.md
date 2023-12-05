@@ -21,8 +21,30 @@
 | 4   | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | <1s     | 597 selectors  |
 | 5   | [GLSL Fragment Shader](https://www.khronos.org/opengl/wiki/Fragment_Shader) | <1s     | 100,80 texture() lookups  |
 
-<!--
+
 # Gallery
 
-![](2023/gallery/day1.jpg)
-_day 1 - scratch web UI did not like this many blocks on screen_ -->
+<img src="2023/gallery/day1.jpg" alt="drawing" height="500"/>
+
+_Day 1 (Scratch) - a Python script generated blocks for the input._
+
+---
+
+<img src="2023/gallery/day3.png" height="500"/>
+
+_Day 3 (Excel) - A grid of formulae propagate boolean values through the sheets._
+
+---
+
+<img src="2023/gallery/day4.png" width="500"/>
+
+_Day 4 (CSS) - The character '0' is recursively doubled in size based on the presence of input elements._
+
+---
+
+<img src="2023/gallery/day5.png" width="500"/>
+
+_Day 5 (GLSL) - Input seeds and almanac ranges are converted to 2D textures; seed positions are 'rendered' on the GPU._
+
+---
+
