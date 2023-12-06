@@ -13,13 +13,14 @@
 
 # Language Log
 
-| Day | Language                                  | Runtime | Size        |
-| --- | ----------------------------------------- | ------- | ----------- |
-| 1   | [Scratch (MIT)](https://scratch.mit.edu/) | 67.45s  | 1059 blocks |
-| 2   | [PostgreSQL](https://www.postgresql.org/) | <1s     | 12 SELECTs  |
-| 3   | [Microsoft Excel](https://www.microsoft.com/en-gb/microsoft-365/excel) (not VBScript/Python)| <1s | 252,340 formula cells |
-| 4   | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | <1s     | 597 selectors  |
-| 5   | [GLSL Fragment Shader](https://www.khronos.org/opengl/wiki/Fragment_Shader) | <1s     | 100,80 texture() lookups  |
+| Day | Language                                  | On the `n`th day of Christmas, saboyer gave to me |
+| --- | ----------------------------------------- | ----------- |
+| 1   | [Scratch (MIT)](https://scratch.mit.edu/) | 1059 blocks |
+| 2   | [PostgreSQL](https://www.postgresql.org/)  | 12 SELECTs  |
+| 3   | [Microsoft Excel](https://www.microsoft.com/en-gb/microsoft-365/excel) (not VBScript/Python)| 252,340 formula cells |
+| 4   | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | 597 selectors  |
+| 5   | [GLSL Fragment Shader](https://www.khronos.org/opengl/wiki/Fragment_Shader) | 100,80 texture() lookups  |
+| 6   | [Desmos Graphing Calculator](https://www.desmos.com/calculator/rxfzqlgozn) | 5 expressions  |
 
 <!--
 # Gallery
