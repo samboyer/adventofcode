@@ -22,6 +22,7 @@
 | 5   | [GLSL Fragment Shader](https://www.khronos.org/opengl/wiki/Fragment_Shader) | 100,80 texture() lookups  |
 | 6   | [Desmos Graphing Calculator](https://www.desmos.com/calculator/rxfzqlgozn) | 5 expressions  |
 | 7   | [Haskell](https://haskell.org) | 28 pattern matches  |
+| 8   | [Bash](https://www.gnu.org/software/bash/manual/) | 2m 3s runtime (for part 1 😬) |
 
 
 # Gallery

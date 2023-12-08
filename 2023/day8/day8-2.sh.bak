@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+# INPUT_FILE="input_test_3"
+INPUT_FILE="input"
+
+
+INSTRUCTIONS=$(head -n 1 $INPUT_FILE)
+NUM_INSTRS=${#INSTRUCTIONS}
+
+CURRENT_POSITIONS_STR=$(grep -e '..A = ' $INPUT_FILE | cut -c-3)
+CURRENT_POSITIONS=(${CURRENT_POSITIONS_STR//$'\n'/ })
+
+echo "${#CURRENT_POSITIONS[@]} starting positions: ${CURRENT_POSITIONS[@]}"
+
+POS_0=${CURRENT_POSITIONS[0]}
+POS_1=${CURRENT_POSITIONS[1]}
+POS_2=${CURRENT_POSITIONS[2]}
+POS_3=${CURRENT_POSITIONS[3]}
+POS_4=${CURRENT_POSITIONS[4]}
+POS_5=${CURRENT_POSITIONS[5]}
+
+STEPS=0
+INSTRUCTION_POS=0
+
+# put map file into a dict for faster lookups
+# declare -A map_dict_lefts
+# declare -A map_dict_rights
+
+
+
+echo "parsing map..."
+MAP=$(cat $INPUT_FILE | tail -n +3)
+while read line; do
+  KEY=${line:0:3}
+  LEFT=${line:7:3}
+  RIGHT=${line:12:3}
+
+#   echo "key is $KEY, left is $LEFT, right is $RIGHT"
+#   map_dict_lefts[$KEY]=$LEFT
+#   map_dict_rights[$KEY]=$RIGHT
+  declare "map_dict_L_$KEY=$LEFT"
+  declare "map_dict_R_$KEY=$RIGHT"
+done <<< "$MAP"
+
+
+test_list(){
+    if [[ "$POS_0" != *Z ]]; then
+        return 0
+    elif [[ "$POS_1" != *Z ]]; then
+        return 0
+    elif [[ "$POS_2" != *Z ]]; then
+        return 0
+    elif [[ "$POS_3" != *Z ]]; then
+        return 0
+    elif [[ "$POS_4" != *Z ]]; then
+        return 0
+    elif [[ "$POS_5" != *Z ]]; then
+        return 0
+    fi
+    return 1
+}
+
+echo "starting loop..."
+
+while test_list ; do
+
+    if (( INSTRUCTION_POS >= NUM_INSTRS )); then
+        INSTRUCTION_POS=0
+    fi
+    INSTRUCTION=${INSTRUCTIONS:$INSTRUCTION_POS:1}
+    # echo "$INSTRUCTION"
+
+    # MAP_LINE=$(grep "^$CURRENT_POS = " $INPUT_FILE)
+
+    # for i in "${!CURRENT_POSITIONS[@]}"; do
+    #     POS="${CURRENT_POSITIONS[$i]}"
+    #     varname="map_dict_${INSTRUCTION}_$POS"
+    #     CURRENT_POSITIONS[i]="${!varname}"
+    # done
+
+    varname="map_dict_${INSTRUCTION}_${POS_0}"
+    POS_0="${!varname}"
+    varname="map_dict_${INSTRUCTION}_${POS_1}"
+    POS_1="${!varname}"
+    varname="map_dict_${INSTRUCTION}_${POS_2}"
+    POS_2="${!varname}"
+    varname="map_dict_${INSTRUCTION}_${POS_3}"
+    POS_3="${!varname}"
+    varname="map_dict_${INSTRUCTION}_${POS_4}"
+    POS_4="${!varname}"
+    varname="map_dict_${INSTRUCTION}_${POS_5}"
+    POS_5="${!varname}"
+
+    # echo "positions are now ${POS_0} ${POS_1}"
+    # read -p "Press Enter to continue" </dev/tty
+    # sleep 0.25
+
+    if (( (STEPS % 2000) == 0 )) ; then
+        echo "$STEPS"
+    fi
+
+    STEPS=$((STEPS+1))
+    INSTRUCTION_POS=$((INSTRUCTION_POS+1))
+
+done
+
+echo "Done in $STEPS steps"
+
