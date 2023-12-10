@@ -23,6 +23,8 @@
 | 6   | [Desmos Graphing Calculator](https://www.desmos.com/calculator/rxfzqlgozn) | 5 expressions  |
 | 7   | [Haskell](https://haskell.org) | 28 pattern matches  |
 | 8   | [Bash](https://www.gnu.org/software/bash/manual/) | 2m 3s runtime (for part 1 😬) |
+| 9   | [C](https://en.wikipedia.org/wiki/C_(programming_language)/) | 2,255 mallocs |
+| 10  | [Processing](https://processing.org/) | 13,364 text() calls |
 
 
 # Gallery
@@ -48,6 +50,13 @@ _Day 4 (CSS) - The character '0' is recursively doubled in size based on the pre
 <img src="2023/gallery/day5.png" width="500"/>
 
 _Day 5 (GLSL) - Input seeds and almanac ranges are converted to 2D textures; seed positions are 'rendered' on the GPU._
+
+---
+
+
+![](2023/gallery/day10.mov)
+
+_Day 10 (Processing)_
 
 ---
 

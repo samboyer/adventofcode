@@ -4,6 +4,13 @@
 #include <string.h>
 #include <assert.h>
 
+int num_mallocs =0;
+void* my_malloc(size_t size){
+    num_mallocs++;
+    return malloc(size);
+}
+
+
 // ty https://stackoverflow.com/a/9210560
 char** str_split(char* a_str, const char a_delim)
 {
@@ -33,7 +40,7 @@ char** str_split(char* a_str, const char a_delim)
        knows where the list of returned strings ends. */
     count++;
 
-    result = malloc(sizeof(char*) * count);
+    result = my_malloc(sizeof(char*) * count);
 
     if (result)
     {
@@ -68,7 +75,7 @@ int get_prev_term_in_sequence(int *nums, int nums_len){
     if (all_zeroes){ return 0; }
 
     // else make a new list containing the diffs and recurse
-    int *diffs = malloc(sizeof(int) * (nums_len-1));
+    int *diffs = my_malloc(sizeof(int) * (nums_len-1));
     for (i=0; i<nums_len-1; i++){
         diffs[i] = nums[i+1]-nums[i];
     }
@@ -86,7 +93,7 @@ char *read_file_into_str(char *filename){
         fseek (f, 0, SEEK_END);
         length = ftell (f);
         fseek (f, 0, SEEK_SET);
-        buffer = malloc (length);
+        buffer = my_malloc (length);
         if (buffer)
         {
             fread (buffer, 1, length, f);
@@ -122,7 +129,7 @@ int main(void){
         int nums_len;
         for (nums_len = 0; *(nums_strs+nums_len); nums_len++){}
         // printf("length=%d\n", nums_len);
-        int* nums = malloc(sizeof(int)*nums_len);
+        int* nums = my_malloc(sizeof(int)*nums_len);
 
         for (int j=0; *(nums_strs+j); j++){
             nums[j] = atoi(nums_strs[j]);
@@ -133,5 +140,6 @@ int main(void){
 
 
     printf("SUM = %d\n", sum);
+    printf("%d mallocs\n", num_mallocs);
     return 0;
 }
