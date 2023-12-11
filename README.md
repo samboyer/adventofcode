@@ -54,10 +54,10 @@ _Day 5 (GLSL) - Input seeds and almanac ranges are converted to 2D textures; see
 
 ---
 
+![ezgif com-optimize(2)](https://github.com/samboyer/adventofcode/assets/12173946/c56a37f2-8d12-402d-8960-2d85434189ac)
 
-![](2023/gallery/day10.mov)
 
-_Day 10 (Processing)_
+_Day 10 (Processing) - the newly-discovered pipes are drawn on each 'frame' - could be sped up much more by doing more iterations per frame, etc._
 
 ---
 
