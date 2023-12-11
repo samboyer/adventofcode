@@ -48,41 +48,18 @@ int FONT_SIZE = 6;
 void drawBase() {
   background(0);
   fill(70);
-  text(String.join("\n", input), OFFSETX, OFFSETY);
+  //text(String.join("\n", input), OFFSETX, OFFSETY);
 }
 
-
-
 void drawState() {
-  int OFFSETX = 5;
-  int OFFSETY = 20;
-  background(0);
-  //fill(70);
-  //text(String.join("\n", input), OFFSETX, OFFSETY);
+  fill(0,0,0,3);
+  square(0, 0, 2000);
 
-  String base = "";
-  String visitedOverlay = "";
-  String frontierOverlay = "";
-  for (int j=0; j<input.length; j++) {
-    for (int i=0; i<input[0].length(); i++) {
-      char c = grid(j,i);
-      base +=c;
-      visitedOverlay += (isVisited[j][i]) ? c : " ";
-      frontierOverlay += frontier.contains(coord(j,i)) ? c : " ";
-    }
-    visitedOverlay+='\n';
-    frontierOverlay+='\n';
-    base+='\n';
-  }
-  fill(90);
-  text(base, OFFSETX, OFFSETY);
-
-  fill(100, 100, 250);
-  text(visitedOverlay, OFFSETX, OFFSETY);
   fill(255);
-  text(frontierOverlay, OFFSETX, OFFSETY);
-  
-  
+  frontier.forEach(coord ->{
+    char c = grid(coord.y, coord.x);
+    text(c, OFFSETX+coord.x*FONT_SIZE, OFFSETY+coord.y*FONT_SIZE);
+  });
 }
 
 void setup() {
@@ -94,10 +71,10 @@ void setup() {
   // REAL INPUT
   input = loadStrings("input");
   size(900,1200);
-  PFont mono  = createFont("ComicMono", 6);
+  PFont mono  = createFont("ComicMono", FONT_SIZE);
 
   textFont(mono);
-  frameRate(1000);
+  frameRate(10000);
 
   print(input.length, input[0].length());
   isVisited = new boolean[input.length][input[0].length()];
@@ -203,7 +180,7 @@ void iterate() {
   iters+=1;
 }
 
-int ITERS_PER_FRAME = 5;
+int ITERS_PER_FRAME = 1;
 
 void draw() {
   if (!STABLE_STATE) {

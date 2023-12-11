@@ -24,7 +24,8 @@
 | 7   | [Haskell](https://haskell.org) | 28 pattern matches  |
 | 8   | [Bash](https://www.gnu.org/software/bash/manual/) | 2m 3s runtime (for part 1 😬) |
 | 9   | [C](https://en.wikipedia.org/wiki/C_(programming_language)/) | 2,255 mallocs |
-| 10  | [Processing](https://processing.org/) | 13,364 text() calls |
+| 10  | [Processing](https://processing.org/) | 13,364 draw calls |
+| 11 | [Rust](https://rust-lang.org) | 374,112 usize-to-i32 casts |
 
 
 # Gallery
