@@ -26,6 +26,8 @@
 | 9   | [C](https://en.wikipedia.org/wiki/C_(programming_language)/) | 2,255 mallocs |
 | 10  | [Processing](https://processing.org/) | 13,364 draw calls |
 | 11 | [Rust](https://rust-lang.org) | 374,112 usize-to-i32 casts |
+| 12 | [Go](https://golang.org) | innumerable 'unused variable' errors |
+| 13 | [PICO-8](https://www.lexaloffle.com/pico-8.php) | ~160,000 draw calls |
 
 
 # Gallery
