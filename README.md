@@ -63,3 +63,18 @@ _Day 10 (Processing) - the newly-discovered pipes are drawn on each 'frame' - co
 
 ---
 
+https://github.com/samboyer/adventofcode/assets/12173946/0ef6e5ae-623b-4c31-8801-501c2891558d
+
+_Day 13 (PICO-8)_
+
+---
+
+
+
+https://github.com/samboyer/adventofcode/assets/12173946/ad183889-eb2c-477f-9c58-7a7f73472811
+
+
+
+_Day 14 (Godot Physics) - the rocks were a bit too unrestricted._
+
+---
