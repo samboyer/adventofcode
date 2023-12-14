@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://k2imhpvhuagx"]
+
+[ext_resource type="Texture2D" uid="uid://baylnwxtsiys8" path="res://bg2.jpg" id="1_0opaw"]
+[ext_resource type="Script" path="res://ROCK_INSTANTIATOR.gd" id="2_134j3"]
+[ext_resource type="PackedScene" uid="uid://d1x0lhosjq7jn" path="res://PREFABS/sphere_rock.tscn" id="3_qvhyd"]
+[ext_resource type="PackedScene" uid="uid://dsaruhh84np5m" path="res://PREFABS/rigid_rock.tscn" id="4_u20k5"]
+[ext_resource type="Texture2D" uid="uid://ckkhcr5oprj5n" path="res://north-arrow-compass-compass-north-icon-png-free-vector.jpg" id="5_4f0sm"]
+[ext_resource type="PackedScene" uid="uid://cwmw1eycs70i3" path="res://PREFABS/v_barrier.tscn" id="5_4s1lj"]
+[ext_resource type="PackedScene" uid="uid://dw4w5eocotyjn" path="res://PREFABS/h_barrier.tscn" id="6_6pfp3"]
+
+[node name="SCENE" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(558, 465)
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(585, 397)
+scale = Vector2(1.5, 1.515)
+texture = ExtResource("1_0opaw")
+
+[node name="ROCK_INSTANTIATOR" type="Node2D" parent="." node_paths=PackedStringArray("score_count")]
+script = ExtResource("2_134j3")
+SPHERE_ROCK = ExtResource("3_qvhyd")
+STATIC_ROCK = ExtResource("4_u20k5")
+V_BARRIER = ExtResource("5_4s1lj")
+H_BARRIER = ExtResource("6_6pfp3")
+score_count = NodePath("../Label")
+
+[node name="North-arrow-compass-compass-north-icon-png-free-vector" type="Sprite2D" parent="."]
+position = Vector2(-31, 4)
+rotation = 3.14159
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_4f0sm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -55.0
+offset_right = 4.0
+offset_bottom = -29.0
+text = "SCORE: "

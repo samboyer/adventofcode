@@ -28,6 +28,7 @@
 | 11 | [Rust](https://rust-lang.org) | 374,112 usize-to-i32 casts |
 | 12 | [Go](https://golang.org) | innumerable 'unused variable' errors |
 | 13 | [PICO-8](https://www.lexaloffle.com/pico-8.php) | ~160,000 draw calls |
+| 14 | [Godot 2D Physics](https://godotengine.org/) | ~3.4M collision tests per frame |
 
 
 # Gallery
