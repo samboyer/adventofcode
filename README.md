@@ -29,6 +29,8 @@
 | 12 | [Go](https://golang.org) | innumerable 'unused variable' errors |
 | 13 | [PICO-8](https://www.lexaloffle.com/pico-8.php) | ~160,000 draw calls |
 | 14 | [Godot 2D Physics](https://godotengine.org/) | ~3.4M collision tests per frame |
+| 15 | [Perl](https://www.perl.org/) | 222 chars of code |
+| 16 | [Ruby](https://www.ruby-lang.org/en/) | 309,599 beam redirections |
 
 
 # Gallery
