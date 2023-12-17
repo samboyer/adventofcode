@@ -31,6 +31,7 @@
 | 14 | [Godot 2D Physics](https://godotengine.org/) | ~3.4M collision tests per frame |
 | 15 | [Perl](https://www.perl.org/) | 222 chars of code |
 | 16 | [Ruby](https://www.ruby-lang.org/en/) | 309,599 beam redirections |
+| 17 | [Java](https://www.oracle.com/java/) | 213,761,590 hashCode() checks |
 
 
 # Gallery
