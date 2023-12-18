@@ -32,6 +32,7 @@
 | 15 | [Perl](https://www.perl.org/) | 222 chars of code |
 | 16 | [Ruby](https://www.ruby-lang.org/en/) | 309,599 beam redirections |
 | 17 | [Java](https://www.oracle.com/java/) | 213,761,590 hashCode() checks |
+| 18 | [Better Java](https://scala-lang.org/) | 786 [shoelaces](https://en.wikipedia.org/wiki/Shoelace_formula) |
 
 
 # Gallery
