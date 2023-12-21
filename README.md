@@ -34,6 +34,8 @@
 | 17 | [Java](https://www.oracle.com/java/) | 213,761,590 hashCode() checks |
 | 18 | [Better Java](https://scala-lang.org/) | 786 [shoelaces](https://en.wikipedia.org/wiki/Shoelace_formula) |
 | 19 | [Typescript](https://www.typescriptlang.org/) | 18 type signatures |
+| 20 | [C#](https://learn.microsoft.com/en-us/dotnet/csharp/) | 39 UnnervingPascalCaseFunctions |
+| 21 | [Lua](https://www.lua.org/) | 4 "oh god arrays start at 1"s |
 
 
 # Gallery
