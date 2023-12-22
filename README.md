@@ -36,6 +36,7 @@
 | 19 | [Typescript](https://www.typescriptlang.org/) | 18 type signatures |
 | 20 | [C#](https://learn.microsoft.com/en-us/dotnet/csharp/) | 39 UnnervingPascalCaseFunctions |
 | 21 | [Lua](https://www.lua.org/) | 4 "oh god arrays start at 1"s |
+| 22 | [PHP](https://www.php.net/docs.php) | 229 $stupid$dollar$signs |
 
 
 # Gallery
