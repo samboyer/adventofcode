@@ -25,7 +25,7 @@ Deck the wires with boughs of pair,
 And a partridge in a pear tree.
 And a partridge in a pear tree.
 
-Hark! len(wires) and " wires, " and len(node_list) and " nodes".
+Hark! (top to toe in wires) and " wires, " and (top to toe in node_list) and " nodes".
 
 
     𝄞 Karger's algorithm (really just random kruskal's algm until 2 groups remain,
