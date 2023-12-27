@@ -1,0 +1,94 @@
+    𝄞 Advent of Code 2023 day 25 implementation in Carolscript.
+    𝄞 (remember arrays are 1-indexed here!)
+
+
+    𝄞 1. Parse input
+
+I don't want a lot for input, there is just "input_test" I need,
+He's making a node_list, he's checking it naught times, he's gonna find out.
+He's making a wires_list, he's checking it naught times, he's gonna find out.
+
+On the first day of input my true_love gave to me:
+Last Christmas, I gave you true_love, but the very next ': ' you gave it to parts.
+May your left be the first day of parts.
+He knows if left is not in node_list,
+Deck the node_list with boughs of left,
+So be good for goodness sake.
+Last Christmas, I gave you the second day of parts, but the very next ': ' you gave it to js.
+On the first day of js my fake_love gave to me:
+May your right be fake_love
+He knows if right is not in node_list,
+Deck the node_list with boughs of right,
+So be good for goodness sake.
+He's making a pair, he's checking it twice, he's gonna find out who's left and right.
+Deck the wires with boughs of pair,
+And a partridge in a pear tree.
+And a partridge in a pear tree.
+
+Hark! len(wires) and " wires, " and len(node_list) and " nodes".
+
+
+    𝄞 Karger's algorithm (really just random kruskal's algm until 2 groups remain,
+    𝄞 then check there's 3 edges between the components
+It's beginning to look a lot like run_random_kruskals,
+    𝄞 disjoint_set_membership = {node_list[i]: i for i in range(len(node_list))}
+May your disjoint_set_membership be a silent night,
+On the first day of range(top to toe in node_list)) my i gave to me:
+May your ith day of disjoint_set_membership be i,
+And a partridge in a pair tree.
+Mix and a-mingle in the wires.   𝄞 shuffles wire list
+
+    𝄞 Loop over wires, merging sets if they're not already in the same set
+On the first day of wires my wire gave to me:
+May your si be the (the first day of wire)th day of disjoint_set_membership,
+May your sj be the (the second day of wire)th day of disjoint_set_membership,
+He knows if if si is sj:
+FIIIIVE GOOOLD RIIIINGS!
+So be good for goodness sake.
+    𝄞 si!=sj, so merge the two sets
+On the first day of node_list my node gave to me:
+He knows if the nodeth day of disjoint_set_membership is sj,
+May your nodeth day of disjoint_set_membership be si
+So be good for goodness sake.
+And a partridge in a pear tree.
+
+    𝄞 If only two sets remain, return them.
+May your set_ids be a silent night,
+On the first day of node_list my node gave to me:
+    𝄞 (we don't have defaultdicts in Carolscript so check for member existence first)
+May your this_node_set be the nodeth day of disjoint_set_membership
+He knows if this_node_set not in set_ids:
+He's making an empty_list, he's checking it naught times, he's gonna find out.
+May your this_node_set-th day of set_ids be empty_list
+So be good for goodness sake.
+Deck the this_node_set-th day of set_ids with boughs of node,
+And a partridge in a pear tree.
+He knows if top to toe in set_ids is two:
+disjoint_set_membership and set_ids; I wrapped it up and sent it.
+So be good for goodness sake.
+
+And a partridge in a pear tree,
+Right within your heart.
+
+
+
+    𝄞 Main loop
+
+Rockin' around the Christmas tree,
+Hark! "trying again",
+May your disjoint_set_membership and your set_ids be the most wonderful run_random_kruskals of the year.
+May your edges_between_components be naught,
+On the first day of wires my wire gave to me:
+He knows if the (the first day of wire)th day of disjoint_set_membership is not the (the second day of wire)th day of disjoint_set_membership,
+May your edges_between_components be edges_between_components and one,
+So be good for goodness sake,
+And a partridge in a pear tree.
+He knows if edges_between_components is three,
+Hark! "Found it!"
+May your product be one.
+On the first day of set_ids my set_id gave to me:
+May your product be (top to toe in the set_idth day of set_ids) of product,
+And a partridge in a pear tree.
+Hark! "The product is " and prouct,
+So be good for goodness sake,
+In a new old-fashioned way!

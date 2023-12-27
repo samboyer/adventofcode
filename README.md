@@ -37,6 +37,9 @@
 | 20 | [C#](https://learn.microsoft.com/en-us/dotnet/csharp/) | 39 UnnervingPascalCaseFunctions |
 | 21 | [Lua](https://www.lua.org/) | 4 "oh god arrays start at 1"s |
 | 22 | [PHP](https://www.php.net/docs.php) | 229 $stupid$dollar$signs |
+| 23 | [Javascript](https://www.php.net/docs.php) | 300,000 routes/sec (still not enought to solve part 2 😭) |
+| 24 | [Python](https://www.php.net/docs.php) | 45,000 line intersection tests |
+| 25 | [Carolscript](2023/day25_carolscript/carolscript-specification.md) | one absolute banger of a christmas carol |
 
 
 # Gallery
