@@ -7,7 +7,7 @@ Carolscript is a fun, festive, dynamically-typed programming language indended f
 - Indentation is not recommended. Carol books are not indented.
 - Lines may end in commas, full stops, or exclamation marks, depending on the flow of the carol.
 - Capitalisation is ignored, but lines should start with a capital letter. 'Christmas' should always be capitalised.
-
+- Comments begin with the Unicode character MUSICAL SYMBOL G CLEF (`𝄞`, U+1D11E). A space after this character is recommended, but not necessary.
 
 ## Data types & artihmetic
 
