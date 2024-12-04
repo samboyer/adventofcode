@@ -11,26 +11,37 @@ Currently using `https://github.com/gahjelle/pythonji` for execution. I may have
 
 ## Dictionary
 
-| Emoji  | Meaning (standalone) | Meaning (as suffix/prefix of other name) |
-| - | - | - |
-| 🧼 | `sorted()` | 'A sorted version of'
+### Functions 
+| Emoji  | Meaning
+| - | - |
+| 🧼 | `sorted()`,  'A sorted version of'
 | 👆 | `abs()` 
 | 🖨 | `print()` 
 | 🤐 | `zip()` 
 | 👓 | `file_readlines()` 
-| © | count of something  | 'counts of' (i.e. frequency of values)
-| 🧾 | file  | 
-| 🚣 | row  |
-
+|🛺 | `min()`
+|🚛 | `max()`
+|📏 | `len()`
+| 🧑‍🌾 | `range()`
 
 ### Miscellaneous 
 | Emoji  | Meaning
 | - | - |
 | 🤛 | left
-| 🤛 | right 
+| 🤜 | right 
+| 🪓 | separator, split point
+| 🚪 | ending, close point
+| 📈 | increase 
+| 📉 | decrease 
+| ⬇️ | index in string/list (`i`)
+| © | 'counts of' (i.e. frequency of values)
+| 🧾 | file  
+| 🚣 | row
+| ⭐ | A single string value 
 | ✖ | A single numeric value 
 | 🎉 | Puzzle result, Part 1
 | 🎉🎉 | Puzzle result, Part 2
+| 🅰️, 🅱️ | input parameters to a binary operator 
 | 0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣  6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 | ...numbers. They're numbers.
 
 ## Previous Years
