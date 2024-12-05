@@ -1,0 +1,70 @@
+"""
+☀5️⃣❕
+"""
+
+🧼 = sorted
+🖨 = print
+🤐 = zip
+👆 = abs
+✅ = True
+❌ = False
+
+🛺 = min
+🚛 = max
+📏 = len
+🧑‍🌾 = range
+🗺 = map
+
+0️⃣ = 0
+1️⃣ = 1
+2️⃣ = 2
+3️⃣ = 3
+4️⃣ = 4
+5️⃣ = 5
+6️⃣ = 6
+7️⃣ = 7
+8️⃣ = 8
+9️⃣ = 9
+🔟 = 10
+
+def 🔢(✖): return int(✖)
+
+def 👓(✏):
+    return [🚣‍♂️.strip() for 🚣‍♂️ in open(✏).readlines() if 🚣‍♂️.strip()]
+
+def 👓🤏(✏):
+    return open(✏).read()
+
+
+# 🟩🟩🟩🅿1️⃣🟩🟩🟩
+
+
+🧾 = 👓🤏('input/5️⃣.txt')
+
+📐 = 🧾.split('\n\n')[0️⃣].split('\n')
+📐 = [🚣‍♂️.split('|') for 🚣‍♂️ in 📐]
+📄📄📄 = 🧾.split('\n\n')[1️⃣].split('\n')
+
+🎉 = 0️⃣
+
+
+# parse pages
+for 🚣‍♂️ in 📄📄📄:
+    📄✖ = 🚣‍♂️.split(',')
+    ❤ = 🔢(📄✖[📏(📄✖)//2])
+
+    📈📈 = ✅
+
+    for 🅰, 🅱 in 📐:
+        if 🅰 in 📄✖ and 🅱 in 📄✖:
+            ⬇🅰 = 📄✖.index(🅰)
+            ⬇🅱 = 📄✖.index(🅱)
+
+            if ⬇🅰>⬇🅱:
+                📈📈 = ❌
+
+    if 📈📈:
+        🎉+=❤
+
+🖨(🎉)
+
