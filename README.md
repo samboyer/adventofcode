@@ -23,13 +23,18 @@ Currently using `https://github.com/gahjelle/pythonji` for execution. I may have
 |🚛 | `max()`
 |📏 | `len()`
 | 🧑‍🌾 | `range()`
+| 🪓 | `str.split(substr)`
+| 🔢 | `int()`
+| 🗺 | `map()`
+| ⛓ | `list()`
+
 
 ### Miscellaneous 
 | Emoji  | Meaning
 | - | - |
 | 🤛 | left
 | 🤜 | right 
-| 🪓 | separator, split point
+| 🪓 | separator, splitted
 | 🚪 | ending, close point
 | 📈 | increase 
 | 📉 | decrease 
